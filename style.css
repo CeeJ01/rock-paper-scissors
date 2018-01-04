@@ -1,0 +1,102 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: sans-serif;
+	vertical-align: baseline;
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 20% auto 15%;
+	grid-template-areas: 
+		"header header header"
+		"player scoreboard computer"
+		"footer footer footer";
+	box-sizing: border-box;
+	width: 800px;
+	height: 500px;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.container h1 {
+	text-align: center;
+	font-size: 150%;
+	border: 1px solid black;
+}
+
+.container h2 {
+	text-align: center;
+	border: 1px solid black;
+}
+
+ul {
+	text-align: center;
+	margin: 10px 0px;
+}
+
+li {
+	width: 75px;
+	display: inline-block;
+}
+
+li a {
+	width: auto;
+	text-align: center;
+}
+
+.header{
+	grid-area: header;
+	border: 1px solid black;
+}
+
+.player {
+	grid-area: player;
+	border: 1px solid black;
+}
+
+.buttons {
+
+}
+
+button {
+	margin: 15px auto;
+	width: 210px;
+	height: 80px;
+	display: block;
+}
+
+.scoreboard {
+	grid-area: scoreboard;
+	border: 1px solid black;
+	margin-top: 0px;
+}
+
+.scoreboard-top {
+	padding: 19px 0px;
+	background-color: lightgray;
+}
+
+.computer {
+	grid-area: computer;
+	border: 1px solid black;
+}
+
+.footer {
+	grid-area: footer;
+	border: 1px solid black;
+}
