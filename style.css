@@ -4,13 +4,12 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label,p, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, section, summary,
 time, mark, audio, video {
-	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -28,20 +27,29 @@ time, mark, audio, video {
 	box-sizing: border-box;
 	width: 800px;
 	height: 500px;
-	border: 1px solid black;
 	margin: 0 auto;
 	margin-top: 50px;
+	background-color: #555555;
 }
 
 .container h1 {
+	color: #AAAAAA;
 	text-align: center;
 	font-size: 150%;
-	border: 1px solid black;
 }
 
 .container h2 {
+	color: #AAAAAA;
 	text-align: center;
-	border: 1px solid black;
+}
+
+p {
+	color: #AAAAAA;
+	text-align: center;
+}
+
+.p-choice {
+	visibility: hidden;
 }
 
 ul {
@@ -50,6 +58,7 @@ ul {
 }
 
 li {
+	color: #AAAAAA;
 	width: 75px;
 	display: inline-block;
 }
@@ -61,12 +70,10 @@ li a {
 
 .header{
 	grid-area: header;
-	border: 1px solid black;
 }
 
 .player {
 	grid-area: player;
-	border: 1px solid black;
 }
 
 .buttons {
@@ -78,25 +85,28 @@ button {
 	width: 210px;
 	height: 80px;
 	display: block;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .scoreboard {
 	grid-area: scoreboard;
-	border: 1px solid black;
 	margin-top: 0px;
 }
 
 .scoreboard-top {
 	padding: 19px 0px;
-	background-color: lightgray;
 }
 
 .computer {
 	grid-area: computer;
-	border: 1px solid black;
 }
 
 .footer {
 	grid-area: footer;
-	border: 1px solid black;
 }

@@ -80,34 +80,43 @@ function outputSelection (selection, gamer) {
   let result = document.querySelector(`.${gamer}-choice`);
   switch (gamer){
     case ('c'): 
-      result.textContent = 'Computer chose: ' + selection;
+      result.textContent = selection;
       break;
     case ('p'):
-      result.textContent = 'Player chose: ' + selection;
+      result.textContent = selection;
       break;
   }
 }
 
 function outputResult(winner,playerChoice, computerChoice) {
+  playerChoice = capitalizeFirstLetter(playerChoice);
+  computerChoice = capitalizeFirstLetter(computerChoice);
+
+  let result = document.querySelector('.summary');
   switch (winner) {
       case ('player'):
+        result.textContent = "Your " + playerChoice + " beat the Computer's " + computerChoice + ". You win this round!"; 
         document.querySelector('.wins').textContent++;
         wins++;
         break;
       case ('computer'):
+        result.textContent = "The Computer's " + computerChoice + " beat out your " + playerChoice + ". You have lost the round.";
         document.querySelector('.loses').textContent++;
         loses++;
         break;
       case ('draw'):
+        if (computerChoice == 'Scissors') result.textContent = "Both of your " + computerChoice + " clash together. It is a tie this round.";
+        else result.textContent = "Both of your " + computerChoice + "s clash together. It is a tie this round.";
         document.querySelector('.ties').textContent++;
         ties++;
         break;
   }
+
   winPercent = ((wins / (wins + loses)) * 100);
   winPercent = roundUp(winPercent, 1);
   let winRatio = document.querySelector('.win-percent');
   if (winPercent > 0) {
-    winRatio.textContent = winPercent + '%'; //incase first trow is a draw
+    winRatio.textContent = winPercent + '%'; //incase first throw is a draw
   } else {
     winRatio.textContent = '0%';
   }
@@ -121,6 +130,6 @@ buttons.forEach((button) => {
     playerSelect = button.textContent;
     let computerSelect = computerPlay();
     playRound(playerSelect, computerSelect);
-
   });
 });
+
