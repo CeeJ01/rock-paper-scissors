@@ -81,6 +81,8 @@ li a {
 }
 
 button {
+	border-radius: 0.2em;
+	box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
 	margin: 15px auto;
 	width: 210px;
 	height: 80px;
@@ -92,15 +94,26 @@ button {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .scoreboard {
 	grid-area: scoreboard;
 	margin-top: 0px;
+	display: inline-block;
 }
 
 .scoreboard-top {
 	padding: 19px 0px;
+}
+
+.score-container {
+	margin: 0 auto;
+	display: inline-grid;
+}
+
+.score-container-wins {
+	
 }
 
 .computer {
