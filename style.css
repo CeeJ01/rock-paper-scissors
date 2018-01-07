@@ -33,13 +33,19 @@ time, mark, audio, video {
 }
 
 .container h1 {
-	color: #AAAAAA;
+	color: #BBBBBB;
 	text-align: center;
 	font-size: 150%;
 }
 
 .container h2 {
 	color: #AAAAAA;
+	text-align: center;
+}
+
+a {
+	justify-self: center;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -50,22 +56,6 @@ p {
 
 .p-choice {
 	visibility: hidden;
-}
-
-ul {
-	text-align: center;
-	margin: 10px 0px;
-}
-
-li {
-	color: #AAAAAA;
-	width: 75px;
-	display: inline-block;
-}
-
-li a {
-	width: auto;
-	text-align: center;
 }
 
 .header{
@@ -105,17 +95,24 @@ button {
 
 .scoreboard-top {
 	padding: 19px 0px;
+	justify-content: space-between;
 }
 
 .score-container {
 	margin: 0 auto;
 	display: inline-grid;
+	justify-content: space-between;
 }
 
-.score-container-wins {
-	
+.score-container-wins, .score-container-ties, .score-container-loses {
+	align-content: center;
+	width: 32%;
 }
 
+h3 {
+	padding: 17px;
+	margin-left: 10px;	
+}
 .computer {
 	grid-area: computer;
 }
